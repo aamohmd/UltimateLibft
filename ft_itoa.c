@@ -6,21 +6,17 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 19:30:15 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/10 17:08:38 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:39:47 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numlen(int n)
+static size_t	ft_numlen(int n)
 {
 	size_t	len;
 
 	len = 0;
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (11);
 	if (n < 0)
 	{
 		len++;
@@ -55,7 +51,8 @@ char	*ft_itoa(int n)
 	}
 	while (n > 0)
 	{
-		num[--len] = (n % 10) + '0';
+		len--;
+		num[len] = (n % 10) + '0';
 		n = n / 10;
 	}
 	return (num);

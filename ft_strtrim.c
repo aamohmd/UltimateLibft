@@ -6,13 +6,13 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 14:38:17 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/10 12:40:45 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:42:07 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_checker(const char *set, char c)
+static int	ft_checker(const char *set, char c)
 {
 	size_t	i;
 

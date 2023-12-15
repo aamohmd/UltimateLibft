@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:54:20 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/14 20:58:37 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/15 16:43:53 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *ptr, int value, size_t num)
 	str = (unsigned char *)ptr;
 	while (i < num)
 	{
-		str[i] = value;
+		str[i] = (unsigned char)value;
 		i++;
 	}
 	return (ptr);

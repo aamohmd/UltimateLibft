@@ -6,13 +6,13 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 17:07:35 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/13 12:38:41 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:34:34 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countwords(const char *s, char c)
+static size_t	ft_countwords(const char *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -31,7 +31,7 @@ size_t	ft_countwords(const char *s, char c)
 	return (count);
 }
 
-char	**ft_freestr(char **str, int x)
+static char	**ft_freestr(char **str, int x)
 {
 	while (x > 0)
 	{
@@ -42,7 +42,7 @@ char	**ft_freestr(char **str, int x)
 	return (NULL);
 }
 
-size_t	ft_i(const char *s, char c)
+static size_t	ft_i(const char *s, char c)
 {
 	size_t	i;
 
@@ -54,7 +54,7 @@ size_t	ft_i(const char *s, char c)
 	return (i);
 }
 
-size_t	ft_j(const char *s, char c)
+static size_t	ft_j(const char *s, char c)
 {
 	size_t	i;
 
@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	x = 0;
+	if (s == NULL)
+		return (NULL);
 	str = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (str == NULL)
 		return (NULL);
