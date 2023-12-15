@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:52:48 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/10 13:00:04 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/14 14:54:43 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *str)
 	if (s == NULL)
 		return (NULL);
 	i = 0;
-	while (i <= len)
+	while (i < len)
 	{
 		s[i] = str[i];
 		i++;

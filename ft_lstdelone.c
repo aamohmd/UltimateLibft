@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 16:03:23 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/14 15:00:30 by aamohame         ###   ########.fr       */
+/*   Created: 2023/12/14 17:07:56 by aamohame          #+#    #+#             */
+/*   Updated: 2023/12/14 21:30:26 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	del(lst->content);
+	free(lst);
 }
