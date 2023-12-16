@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 10:36:26 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/15 13:22:40 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/16 16:21:04 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t		ft_strlcat(char *s1, const char *s2, size_t size);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-void		*ft_memset(void *ptr, int value, size_t num);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strjoin(char const *s1, char const *s2);

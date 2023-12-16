@@ -14,11 +14,14 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(BONUS_OBJS) $(OBJS)
+
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(BONUS_OBJS) $(OBJS)
+%.o : %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS) $(BONUS_OBJS)
@@ -28,6 +31,4 @@ fclean: clean
 
 re: fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+.PHONY: all clean fclean re bonus

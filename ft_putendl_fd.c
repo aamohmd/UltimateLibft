@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:28:06 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/12 12:32:44 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/16 15:31:51 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
+	if (!(s))
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
