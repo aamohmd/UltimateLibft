@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 12:03:34 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/16 15:09:45 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/22 09:59:21 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	lst = NULL;
+	*lst = NULL;
 }

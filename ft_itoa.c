@@ -6,7 +6,7 @@
 /*   By: aamohame <aamohame@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 19:30:15 by aamohame          #+#    #+#             */
-/*   Updated: 2023/12/15 15:39:47 by aamohame         ###   ########.fr       */
+/*   Updated: 2023/12/22 01:19:17 by aamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char	*ft_itoa(int n)
 	size_t	len;
 	char	*num;
 
-	len = ft_numlen(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	else if (n == 0)
 		return (ft_strdup("0"));
+	len = ft_numlen(n);
 	num = (char *)malloc((len + 1) * sizeof(char));
 	if (num == NULL)
 		return (NULL);
